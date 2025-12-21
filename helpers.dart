@@ -29,3 +29,8 @@ readString(prompt) {
     }
   }
 }
+
+void pausePrintHidden(prompt) {
+  stdout.writeln(prompt);
+  stdin.readLineSync();
+}
