@@ -28,5 +28,5 @@ The program runs in the terminal and uses menus to navigate.
 - helpers.dart: input & helper functions
 
 ## Team Work
-- Anouar: main.dart, students.dart
-- Adam: tasks.dart, statistics.dart, helpers.dart
+- Adam: main.dart, students.dart
+- Anouar: tasks.dart, statistics.dart, helpers.dart
