@@ -3,7 +3,6 @@ import 'dart:io';
 readInt(prompt) {
   while (true) {
     print(prompt);
-    stdout.write("enter a number :");
     String? number = stdin.readLineSync();
     var numb = num.tryParse(number!);
     if (numb == null) {
