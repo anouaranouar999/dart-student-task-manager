@@ -49,14 +49,15 @@ void showStudents() {
   print("=============");
   print("ID  Name");
   print("=============");
+
   students.forEach((element) {
-    print("=============");
     print("${element["Id"]}   ${element["Name"]}");
-    print("=============");
   });
+  print("=============");
 }
 
 void studentExist(String name) {
+  name = capitalize(name);
   if (studentsNames.contains(name)) {
     print("=============");
     print("$name was found.");
