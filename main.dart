@@ -70,8 +70,10 @@ void handleUserChoice(List options) {
     case 1:
       switch (options[1]) {
         case 1:
-          String name = readString("Please enter student's name: ");
-          addStudent(name);
+          String studentName = readString(
+            "Please enter student's studentName: ",
+          );
+          addStudent(studentName);
 
         case 2:
           int studentId = readInt("Please enter student's ID: ");
@@ -81,11 +83,14 @@ void handleUserChoice(List options) {
           showStudents();
 
         case 4:
-          String name = readString("Please enter student's name: ");
-          studentExist(name);
+          String studentName = readString(
+            "Please enter student's studentName: ",
+          );
+          studentExist(studentName);
 
         case 5:
-          print("ss");
+          String studentName = readString("Please enter student's name: ");
+          getStudentByld(studentName);
       }
 
     case 2:
