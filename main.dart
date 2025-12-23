@@ -87,6 +87,44 @@ void handleUserChoice(List options) {
         case 5:
           print("ss");
       }
+
     case 2:
+      switch (options[1]) {
+        case 1:
+          int studentId = readInt("Please enter student's ID: ");
+          addTask(studentId);
+
+        case 2:
+          markTaskAsCompleted();
+
+        case 3:
+          removeTask();
+
+        case 4:
+          int studentId = readInt("Please enter student's ID: ");
+          showTasksByStudent(studentId);
+
+        case 5:
+          int taskId = readInt("Please enter student's ID: ");
+          taskExists(taskId);
+      }
+
+    case 3:
+      switch (options[1]) {
+        case 1:
+          totalStudents();
+
+        case 2:
+          totalTasks();
+
+        case 3:
+          completedTasks();
+
+        case 4:
+          completionRate();
+
+        case 5:
+          mostActiveStudent();
+      }
   }
 }

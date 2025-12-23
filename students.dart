@@ -1,5 +1,7 @@
+import 'tasks.dart';
+
 int id = 0;
-List<Map> students = [];
+List<Map<String, dynamic>> students = [];
 
 List get studentsNames => students.map((student) => student['Name']).toList();
 List get studentsIds => students.map((student) => student["Id"]).toList();
@@ -17,7 +19,7 @@ void addStudent(String name) {
     print("$name is already in the system.");
     print("=============");
   } else {
-    Map student = {"Id": id, "Name": name};
+    Map<String, dynamic> student = {"Id": id, "Name": name};
     students.add(student);
     print("=============");
     print("$name is added to the system.");
@@ -56,15 +58,31 @@ void showStudents() {
   print("=============");
 }
 
-void studentExist(String name) {
+bool studentExist(String name) {
   name = capitalize(name);
   if (studentsNames.contains(name)) {
     print("=============");
     print("$name was found.");
     print("=============");
+    return true;
   } else {
     print("=============");
     print("$name was not found.");
     print("=============");
+    return false;
+  }
+}
+
+void getStudentByld(String studentName) {
+  if (!studentExist(studentName)) {
+    print("$studentName was not found.");
+  } else {
+    print("Id:${studentsNames.indexOf(studentName)}");
+    print("Name: $studentName");
+    tasks.forEach((element) {
+      if (element["studentId"] == studentsNames.indexOf(studentName)) {
+        print("Taks: ${element["title"]}");
+      }
+    });
   }
 }
